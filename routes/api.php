@@ -23,6 +23,8 @@ Route::get('/test', function (){
     return ['msg' => 'my fisrt API response'];
 });
 
-Route::get('/products', function (){
-    return Product::all();
+//Products Route
+Route::namespace('Api')->group(function(){
+    Route::get('/products','ProductController@index');
 });
+

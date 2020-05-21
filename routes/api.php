@@ -24,7 +24,9 @@ Route::get('/test', function (){
 });
 
 //Products Route
-Route::namespace('Api')->group(function(){
-    Route::get('/products','ProductController@index');
+Route::namespace('Api')->prefix('products')->group(function(){
+    Route::get('/','ProductController@index');
+    Route::get('/{id}','ProductController@show');
+    Route::post('/','ProductController@save');
 });
 

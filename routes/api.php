@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/test', function (){
-    return ['msg' => 'minha primeira resposta de API'];
+    return ['msg' => 'my fisrt API response'];
 });
 
 Route::get('/products', function (){
